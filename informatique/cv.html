@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CV digital interactif de David Genty — profil numérique, systèmes, réseaux, automatisation et intelligence artificielle." />
+  <meta name="theme-color" content="#090b10" />
+  <title>CV Digital — David Genty</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cv.css" />
+  <style>
+    /* Animation locale du profile.workflow — n'altère pas la position des cartes. */
+    .profile-engine .engine-flow-animated {
+      top: 30px;
+      height: 350px;
+      z-index: 1;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .profile-engine .engine-flow-path {
+      fill: none;
+      stroke: rgba(68, 215, 182, .48);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-dasharray: 8 10;
+      animation: engineDashFlow 1.15s linear infinite;
+    }
+
+    .profile-engine .engine-flow-dot {
+      fill: #d6ff6b;
+      filter: url(#engineGlow);
+      opacity: .95;
+    }
+
+    @keyframes engineDashFlow {
+      to { stroke-dashoffset: -36; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .profile-engine .engine-flow-path {
+        animation: none;
+      }
+      .profile-engine .engine-flow-dot {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="cv-page">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header cv-header" id="top">
+    <a class="brand" href="index.html" aria-label="Retour au portfolio de David Genty">
+      <span class="brand-mark">DG</span>
+      <span class="brand-copy">
+        <strong>DAVID GENTY</strong>
+        <small>CV digital / 2026</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Navigation du CV">
+      <a class="nav-securite" href="../index.html">← Portfolio sécurité</a>
+      <a href="#profil">Profil</a>
+      <a href="#competences">Compétences</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#formation">Formation</a>
+      <a href="le-coin-des-tests.html">Le coin des tests</a>
+      <a class="nav-cta" href="index.html">Portfolio ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cv-hero section-shell" aria-labelledby="cv-title">
+      <div class="cv-hero-copy reveal">
+        <div class="cv-system-label">
+          <span class="system-dot"></span>
+          PROFIL NUMÉRIQUE / SYSTÈMES / SOLUTIONS
+        </div>
+        <h1 id="cv-title">David Genty<span>.</span></h1>
+        <p class="cv-role"><strong>Profil numérique</strong> · <em>Systèmes &amp; réseaux · Automatisation · Intelligence artificielle</em></p>
+        <p class="cv-summary">
+          Plus de quinze ans d’expérience dans des environnements exigeants, aujourd’hui mis au service d’une transition vers les métiers du numérique.
+          Mon parcours associe <strong>compréhension des systèmes et réseaux, expérimentation technique, conception de solutions et accompagnement des utilisateurs</strong>.
+        </p>
+      </div>
+
+      <div class="cv-hero-navigation reveal">
+        <div class="cv-actions">
+          <a class="button button-primary" href="#parcours">Explorer le parcours <span>↘</span></a>
+        </div>
+
+        <div class="identity-strip" aria-label="Projet professionnel et mobilité">
+          <div><small>Zone</small><strong>Paris & périphérie</strong></div>
+          <div><small>Projet</small><strong>Alternance numérique</strong></div>
+          <div><small>Approche</small><strong>Technique · usages · transmission</strong></div>
+        </div>
+      </div>
+
+      <div class="cv-hero-system reveal" aria-label="Carte interactive du profil professionnel">
+        <div class="system-window">
+          <div class="system-bar">
+            <span>profile.workflow</span>
+            <div class="window-lights"><i></i><i></i><i></i></div>
+          </div>
+          <div class="profile-engine">
+            <svg class="engine-lines engine-flow-animated" viewBox="0 0 700 420" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <filter id="engineGlow">
+                  <feGaussianBlur stdDeviation="3.2" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- INPUT → PROCESS -->
+              <path id="engine-p1" class="engine-flow-path" d="M92 205 C155 205 170 105 255 105" />
+              <path id="engine-p2" class="engine-flow-path" d="M92 205 C155 205 170 305 255 305" />
+
+              <!-- PROCESS → TRANSFORM -->
+              <path id="engine-p3" class="engine-flow-path" d="M255 105 C335 105 355 205 438 205" />
+              <path id="engine-p4" class="engine-flow-path" d="M255 305 C335 305 355 205 438 205" />
+
+              <!-- TRANSFORM → OUTPUT -->
+              <path id="engine-p5" class="engine-flow-path" d="M438 205 C515 205 535 105 610 105" />
+              <path id="engine-p6" class="engine-flow-path" d="M438 205 C515 205 535 305 610 305" />
+
+              <!-- Points lumineux qui circulent sur les connexions -->
+              <circle class="engine-flow-dot" r="4.5">
+                <animateMotion dur="3.8s" repeatCount="indefinite" begin="0s">
+                  <mpath href="#engine-p1" />
+                </animateMotion>
+              </circle>
+              <circle class="engine-flow-dot" r="4.5">
+                <animateMotion dur="4.2s" repeatCount="indefinite" begin="-1.7s">
+                  <mpath href="#engine-p2" />
+                </animateMotion>
+              </circle>
+              <circle class="engine-flow-dot" r="4.5">
+                <animateMotion dur="3.6s" repeatCount="indefinite" begin="-0.8s">
+                  <mpath href="#engine-p3" />
+                </animateMotion>
+              </circle>
+              <circle class="engine-flow-dot" r="4.5">
+                <animateMotion dur="4s" repeatCount="indefinite" begin="-2.2s">
+                  <mpath href="#engine-p4" />
+                </animateMotion>
+              </circle>
+              <circle class="engine-flow-dot" r="4.5">
+                <animateMotion dur="3.7s" repeatCount="indefinite" begin="-1.1s">
+                  <mpath href="#engine-p5" />
+                </animateMotion>
+              </circle>
+              <circle class="engine-flow-dot" r="4.5">
+                <animateMotion dur="4.1s" repeatCount="indefinite" begin="-2.8s">
+                  <mpath href="#engine-p6" />
+                </animateMotion>
+              </circle>
+            </svg>
+
+            <button class="engine-node node-source active" data-engine="source">
+              <span>INPUT</span><strong>+ de 15 ans de terrain</strong><small>sécurité coordination</small>
+            </button>
+            <button class="engine-node node-analysis" data-engine="analysis">
+              <span>PROCESS</span><strong>Analyse</strong><small>prioriser structurer</small>
+            </button>
+            <button class="engine-node node-service" data-engine="service">
+              <span>PROCESS</span><strong>Service</strong><small>écouter transmettre</small>
+            </button>
+            <button class="engine-node node-core" data-engine="core">
+              <span>TRANSFORM</span><strong>Systèmes + solutions</strong><small>comprendre connecter</small>
+            </button>
+            <button class="engine-node node-output-a" data-engine="output-a">
+              <span>OUTPUT</span><strong>Fiabilité</strong><small>solutions concrètes</small>
+            </button>
+            <button class="engine-node node-output-b" data-engine="output-b">
+              <span>OUTPUT</span><strong>Adoption</strong><small>orientée utilisateurs</small>
+            </button>
+
+            <div class="engine-inspector" id="engineInspector" aria-live="polite">
+              <small>MODULE ACTIF</small>
+              <strong>+ de 15 ans de terrain</strong>
+              <p>Rigueur, procédures, coordination et prise de décision dans des environnements sensibles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-ticker" aria-label="Atouts principaux">
+      <div class="cv-ticker-track">
+        <span>TRAVAIL EN ÉQUIPE</span><i></i><span>SENS DU SERVICE</span><i></i><span>ESPRIT D’ANALYSE</span><i></i><span>TRANSMISSION</span><i></i><span>COORDINATION</span><i></i><span>RIGUEUR</span><i></i>
+        <span>TRAVAIL EN ÉQUIPE</span><i></i><span>SENS DU SERVICE</span><i></i><span>ESPRIT D’ANALYSE</span><i></i><span>TRANSMISSION</span><i></i><span>COORDINATION</span><i></i><span>RIGUEUR</span><i></i>
+      </div>
+    </section>
+
+    <section class="section-shell cv-profile" id="profil">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> 01 — Profil</p>
+        <h2>Un parcours terrain. Une logique de système.</h2>
+      </div>
+      <div class="cv-profile-grid">
+        <article class="profile-card profile-card-main reveal">
+          <p class="profile-card-kicker">TRANSFERT DE COMPÉTENCES</p>
+          <h3>Je ne repars pas de zéro.</h3>
+          <p>
+            Superviser une équipe, appliquer des procédures, analyser une situation à risque, rédiger des comptes rendus,
+            transmettre une information utile : ces compétences changent de contexte, mais pas de valeur.
+          </p>
+          <p>
+            Mon objectif est de les transposer vers les métiers du numérique, de la compréhension des systèmes à la conception de solutions pensées autour des utilisateurs.
+          </p>
+        </article>
+        <article class="profile-card reveal">
+          <span class="metric">15<span>+ ans</span></span>
+          <h3>Environnements exigeants</h3>
+          <p>Sécurité incendie, sûreté, sites sensibles, coordination d’agents et relation client.</p>
+        </article>
+        <article class="profile-card reveal">
+          <span class="metric">100<span>+</span></span>
+          <h3>Situations concrètes</h3>
+          <p>Vols détectés et signalés durant l’expérience G4S, avec une culture forte de l’observation et du discernement.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell cv-skills" id="competences">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow"><span></span> 02 — Compétences</p>
+        <h2>Des modules qui se connectent.</h2>
+      </div>
+
+      <div class="skills-console reveal">
+        <div class="console-nav" role="tablist" aria-label="Catégories de compétences">
+          <button class="skill-tab active" data-skill="transfer" role="tab" aria-selected="true">Transférables</button>
+          <button class="skill-tab" data-skill="systems" role="tab" aria-selected="false">Systèmes & réseaux</button>
+          <button class="skill-tab" data-skill="automation" role="tab" aria-selected="false">Automatisation & IA</button>
+          <button class="skill-tab" data-skill="human" role="tab" aria-selected="false">Humain & transmission</button>
+        </div>
+
+        <div class="console-body">
+          <div class="skill-map active" data-panel="transfer">
+            <article><span>01</span><strong>Transmission</strong><p>Former des utilisateurs et rédiger des comptes rendus.</p></article>
+            <article><span>02</span><strong>Sécurité & procédures</strong><p>Appliquer des consignes et analyser une situation à risque.</p></article>
+            <article><span>03</span><strong>Coordination</strong><p>Superviser une équipe, prioriser et transmettre les informations.</p></article>
+          </div>
+
+          <div class="skill-map" data-panel="systems">
+            <article><span>01</span><strong>Fondamentaux réseau</strong><p>Adressage IP, VLAN, routage, services réseau, support et dépannage.</p></article>
+            <article><span>02</span><strong>Cisco Packet Tracer</strong><p>Création et configuration de topologies réseau dans un environnement simulé.</p></article>
+            <article><span>03</span><strong>Environnements système</strong><p>VirtualBox pratiqué ; Linux et Kali explorés dans le cadre de l’apprentissage.</p></article>
+          </div>
+
+          <div class="skill-map" data-panel="automation">
+            <article><span>01</span><strong>Écosystème No-Code</strong><p>Slack, Notion, Kumospace, Tally, Airtable, Make, Softr, Dorik et Glide.</p></article>
+            <article><span>02</span><strong>IA génératives</strong><p>ChatGPT, Copilot, Mistral, Gemini et Claude pour apprendre, vulgariser, produire et assister.</p></article>
+            <article><span>03</span><strong>Conception & expérimentation</strong><p>Création de démonstrateurs personnels reliant besoin, interface, données et usages.</p></article>
+          </div>
+
+          <div class="skill-map" data-panel="human">
+            <article><span>01</span><strong>Travail en équipe</strong><p>Coordonner, écouter et agir dans un cadre collectif.</p></article>
+            <article><span>02</span><strong>Sens du service</strong><p>Comprendre l’utilisateur, le client ou le bénéficiaire avant la solution.</p></article>
+            <article><span>03</span><strong>Transmission</strong><p>Expliquer clairement, accompagner les usages et rendre l’information accessible.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell cv-career" id="parcours">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> 03 — Parcours professionnel</p>
+        <h2>Lire mon expérience comme un workflow.</h2>
+      </div>
+
+      <div class="career-layout">
+        <div class="career-rail reveal" aria-label="Expériences professionnelles">
+          <button class="career-step active" data-career="transition">
+            <span class="career-year">2023—2026</span>
+            <i></i>
+            <span><small>TRANSITION</small><strong>Montée en compétences</strong></span>
+          </button>
+          <button class="career-step" data-career="elia">
+            <span class="career-year">2017—2023</span>
+            <i></i>
+            <span><small>ELIA · BRUXELLES</small><strong>Agent mobile, puis chef de poste</strong></span>
+          </button>
+          <button class="career-step" data-career="g4s">
+            <span class="career-year">2014—2017</span>
+            <i></i>
+            <span><small>G4S · BRUXELLES</small><strong>Agent de sûreté polyvalent</strong></span>
+          </button>
+          <button class="career-step" data-career="samsic">
+            <span class="career-year">2012—2014</span>
+            <i></i>
+            <span><small>SAMSIC · LEVALLOIS-PERRET</small><strong>SSIAP 1 & SSIAP 2</strong></span>
+          </button>
+          <button class="career-step" data-career="goron">
+            <span class="career-year">2006—2011</span>
+            <i></i>
+            <span><small>GORON / LANCRY · NOISY-LE-GRAND / PARIS 8</small><strong>SSIAP 1 & SSIAP 2</strong></span>
+          </button>
+        </div>
+
+        <article class="career-detail reveal" id="careerDetail" aria-live="polite">
+          <div class="career-detail-top">
+            <div><small>ÉTAPE ACTIVE</small><span>2023 — 2026</span></div>
+            <span class="career-state"><i></i> transition</span>
+          </div>
+          <h3>Montée en compétences · autodidacte</h3>
+          <p class="career-location">Bruxelles → Paris</p>
+          <ul>
+            <li>Période consacrée à l’accompagnement familial et à la formation.</li>
+            <li>Aide à l’utilisation de l’IA auprès de résidents et de personnel en EHPAD.</li>
+            <li>Évolution progressive vers les systèmes et réseaux, le cloud, puis le No-Code, l’automatisation et l’IA appliquée.</li>
+          </ul>
+          <div class="career-tags"><span>Résilience</span><span>Accompagnement</span><span>Veille professionnelle</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell cv-training" id="formation">
+      <div class="section-heading compact reveal">
+        <p class="eyebrow"><span></span> 04 — Formation</p>
+        <h2>Mes apprentissages numériques.</h2>
+      </div>
+
+      <div class="training-pipeline reveal">
+        <article class="training-node">
+          <div class="training-status">2026</div>
+          <span class="training-index">01</span>
+          <h3>Cisco Networking Academy — Parcours Technicien réseau</h3>
+          <p class="training-meta">Apprentissage en ligne · 2026</p>
+          <ul>
+            <li>Notions de base sur les réseaux.</li>
+            <li>Équipements et configuration de base.</li>
+            <li>Adressage, dépannage, support et sécurité réseau.</li>
+          </ul>
+        </article>
+
+        <div class="pipeline-arrow" aria-hidden="true">→</div>
+
+        <article class="training-node current">
+          <div class="training-status"><i></i> AUTOFORMATION · 2024—2026</div>
+          <span class="training-index">02</span>
+          <h3>Intelligence artificielle, automatisation et outils numériques</h3>
+          <p class="training-meta">Apprentissage autonome · projets personnels</p>
+          <ul>
+            <li>Utilisation des IA génératives pour apprendre, vulgariser et créer.</li>
+            <li>Découverte et pratique d’outils No-Code et d’automatisation.</li>
+            <li>Conception de démonstrateurs et de projets personnels.</li>
+            <li>Réflexion sur l’intégration de l’IA dans des usages concrets.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell cv-extra">
+      <div class="extra-grid reveal">
+        <article>
+          <small>LANGUE</small>
+          <strong>Anglais · B1</strong>
+        </article>
+        <article>
+          <small>CENTRES D’INTÉRÊT</small>
+          <strong>Cyclisme · randonnée · art digital</strong>
+        </article>
+        <article>
+          <small>MOBILITÉ</small>
+          <strong>Permis A & B</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell cv-contact">
+      <div class="contact-panel reveal">
+        <div>
+          <p class="eyebrow"><span></span> CONTACT</p>
+          <h2>Une infrastructure à comprendre. Une solution à imaginer.</h2>
+        </div>
+        <div class="contact-data">
+          <a href="https://www.linkedin.com/in/david--genty/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+          <a href="index.html">Retour au portfolio <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>DAVID GENTY · CV DIGITAL</span>
+    <a href="#top">Retour en haut ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="cv.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CV David GENTY – Sécurité incendie et sûreté (version publique)</title>
+<meta name="robots" content="noindex">
+<style>
+  @page { size: A4; margin: 0; }
+  :root{ --red:#c8102e; --red-soft:#fdf1f3; --steel:#2f5d8a; --steel-soft:#eef3f8; --navy:#14213d; --ink:#1f2937; --muted:#5b6472; --line:#e3e6ea; --soft:#f5f6f8; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Calibri,Arial,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;background:#fff}
+  .page{width:210mm;height:297mm;display:flex;flex-direction:column;overflow:hidden}
+
+  header{background:var(--navy);color:#fff;padding:5.5mm 9mm 5mm;display:flex;justify-content:space-between;align-items:center;position:relative}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.8mm;background:var(--red)}
+  .name{font-size:24pt;font-weight:800;line-height:1;display:flex;align-items:center;gap:2.5mm}
+  .name span{color:#ff4d5e}
+  .name svg{width:7mm;height:7mm}
+  .title{font-size:12pt;font-weight:700;margin-top:1.6mm;text-transform:uppercase;letter-spacing:.5px}
+  .title em{font-style:normal;color:#ff9aa5}
+  .seek{margin-top:1.4mm;font-size:9pt;color:#d6dbe4}
+  .seek b{color:#fff}
+  .contact{font-size:8.6pt;line-height:1.6;text-align:right;color:#e6e9ef}
+  .contact b{color:#fff;font-size:9.4pt}
+
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+  .strip div{padding:2.2mm 2mm;text-align:center;border-right:1px solid var(--line)}
+  .strip div:last-child{border-right:0}
+  .strip b{display:block;color:var(--red);font-size:12pt;font-weight:800;line-height:1.1}
+  .strip span{font-size:7.6pt;color:var(--muted);line-height:1.2;display:block}
+
+  .body{flex:1;display:grid;grid-template-columns:1fr 58mm}
+  main{padding:3.6mm 5mm 3mm 9mm;font-size:8.2pt;line-height:1.3}
+  aside{background:var(--soft);padding:3.6mm 6mm 3mm 5mm;font-size:8pt;line-height:1.3;border-left:1px solid var(--line)}
+
+  h2{font-size:10.5pt;font-weight:800;color:var(--navy);text-transform:uppercase;letter-spacing:.4px;margin:2.8mm 0 1.4mm;display:flex;align-items:center;gap:2mm}
+  h2::before{content:"";width:2.8mm;height:2.8mm;background:var(--red);border-radius:.5mm;flex:0 0 auto}
+  h2:first-child{margin-top:0}
+  .profile{text-align:justify}
+
+  .box{border-radius:2.2mm;padding:2.4mm 3.4mm 2.4mm;margin-top:2.4mm}
+  .fire{background:var(--red-soft);border:1.3px solid var(--red)}
+  .surete{background:var(--steel-soft);border:1.3px solid var(--steel)}
+  .box-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2mm}
+  .box-head h2{margin:0}
+  .fire .box-head h2{color:var(--red)}
+  .surete .box-head h2{color:var(--steel)}
+  .surete .box-head h2::before{background:var(--steel)}
+  .tag{color:#fff;font-size:7.6pt;font-weight:700;padding:.6mm 2.2mm;border-radius:3mm}
+  .fire .tag{background:var(--red)} .surete .tag{background:var(--steel)}
+  .job + .job{margin-top:1.6mm;padding-top:1.4mm;border-top:1px dashed #d9b3ba}
+  .surete .job + .job{border-top-color:#b9c9da}
+  .jt{display:flex;justify-content:space-between;align-items:baseline;gap:3mm}
+  .jt h3{font-size:9.1pt;font-weight:800;color:var(--navy)}
+  .jt .d{font-size:8.1pt;font-weight:700;color:var(--red);white-space:nowrap}
+  .surete .jt .d{color:var(--steel)}
+  .co{font-size:8pt;color:var(--muted);margin:.2mm 0 .5mm}
+  .co b{color:var(--ink)}
+  ul{padding-left:3.6mm}
+  li{margin:.2mm 0}
+  li::marker{color:var(--red)}
+  .surete li::marker{color:var(--steel)}
+  .other{margin-top:.6mm}
+  .other .row{display:flex;justify-content:space-between;gap:3mm;margin:.6mm 0}
+  .other b{color:var(--navy)}
+  .other .d{color:var(--muted);font-weight:700;white-space:nowrap}
+
+  aside h2{font-size:9.4pt;margin:3mm 0 1.3mm}
+  .dip{background:#fff;border:1px solid var(--line);border-left:3px solid var(--red);border-radius:1.4mm;padding:1.3mm 2.2mm;margin-bottom:1.2mm}
+  .dip b{color:var(--navy);font-size:8.8pt}
+  .dip span{display:block;color:var(--muted);font-size:7.6pt}
+  .dip.todo{border-left-color:var(--steel);background:var(--steel-soft)}
+  .grp{font-weight:700;color:var(--navy);font-size:8.3pt;margin:1.5mm 0 .4mm}
+  .grp:first-of-type{margin-top:0}
+  .tags{font-size:7.9pt;color:var(--ink)}
+  .list{list-style:none;padding:0}
+  .list li{position:relative;padding-left:3.2mm;margin:.6mm 0}
+  .list li::before{content:"";position:absolute;left:0;top:1.4mm;width:1.5mm;height:1.5mm;border-radius:50%;background:var(--red)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div>
+    <div class="name"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#ff4d5e" d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>David <span>GENTY</span></div>
+    <div class="title">Agent SSIAP 1 <em>·</em> Chef d'équipe SSIAP 2</div>
+    <div class="seek">Sécurité incendie &amp; sûreté · <b>ouvert à une POEI</b></div>
+  </div>
+  <div class="contact">
+    <b>linkedin.com/in/david--genty</b><br>
+    Coordonnées communiquées sur demande<br>
+    Paris et sa périphérie<br>
+    Permis B et A · Mobile en transports
+  </div>
+</header>
+
+
+<div class="body">
+<main>
+  <h2>Profil</h2>
+  <p class="profile">Fort de plus de quinze ans d'expérience dans la sécurité, dont la sécurité incendie en France de 2006 à 2014, comme agent SSIAP 1 puis chef d'équipe SSIAP 2, j'ai développé une solide pratique de la prévention des risques, de la coordination des équipes et de la gestion des interventions. Mon parcours s'est poursuivi en Belgique dans la sûreté et le gardiennage, notamment comme chef de poste sur un site industriel classé Seveso à Bruxelles. Je souhaite aujourd'hui mettre cette double expérience au service d'un employeur en France, sur un poste <b>SSIAP 1 ou SSIAP 2</b>. Une <b>POEI</b> pourrait être étudiée avec un employeur et France Travail pour les remises à niveau SSIAP 1 et 2, la formation SST et, selon le poste, le TFP APS.</p>
+
+  <div class="box fire">
+    <div class="box-head"><h2>Sécurité incendie en France</h2><span class="tag">2006 – 2014</span></div>
+
+    <div class="job">
+      <div class="jt"><h3>Chef d'équipe SSIAP 2 (et agent SSIAP 1)</h3><span class="d">Nov. 2012 – Janv. 2014</span></div>
+      <div class="co"><b>SAMSIC Sécurité</b> · Centre commercial So Ouest, Levallois-Perret (92) – environ 100 boutiques et un cinéma</div>
+      <ul>
+        <li>Coordination du PC sécurité et répartition des tâches de deux agents SSIAP 1 ; SSI, rondes, essais périodiques.</li>
+        <li>Secours à personne : appel, accueil et guidage des secours, sécurisation de la zone, lien avec la sûreté et la technique.</li>
+        <li>Prévention auprès des boutiques (moyens de secours visibles et accessibles) ; accompagnement des nouveaux agents.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="jt"><h3>Agent SSIAP 1, puis chef d'équipe SSIAP 2</h3><span class="d">Févr. 2010 – Déc. 2011</span></div>
+      <div class="co"><b>Lancry Protection Sécurité</b> (aujourd'hui Atalian) · Siège de Groupama, Paris 8e</div>
+      <ul>
+        <li>Chef d'équipe sur proposition des responsables du site : coordination des agents, main courante, suivi des interventions techniques.</li>
+        <li>Préparation des permis de feu sous la supervision du chef de site : mesures de prévention, suivi du chantier, contrôle de la zone en fin de travaux.</li>
+        <li>Sécurité incendie des événements organisés dans l'amphithéâtre : consignes, prévention, accueil et briefing des renforts.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="jt"><h3>Agent de sécurité incendie SSIAP 1</h3><span class="d">Déc. 2006 – Janv. 2010</span></div>
+      <div class="co"><b>GORON SA</b> · Sites Groupama de Noisy-le-Grand (Le Marne, Le Piazza) et Bry-sur-Marne</div>
+      <ul>
+        <li>PC sécurité et SSI de catégorie A ; rondes : extincteurs, issues, éclairage de sécurité, portes coupe-feu ; anomalies transmises et tracées.</li>
+        <li>Suivi des permis de feu sur le site Le Marne : mesures de prévention, suivi des travaux, contrôle de la zone en fin de chantier.</li>
+        <li>Remplacement du chef de site pendant environ un mois : plannings, couverture des postes, dispatching, comptes rendus au client.</li>
+        <li>Tentative de vol repérée en ronde : police alertée, situation suivie jusqu'à son arrivée – <b>remerciements écrits de l'employeur</b>.</li>
+        <li>Passage à la main courante électronique : recueil des besoins des agents, essais, formation des collègues.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box surete">
+    <div class="box-head"><h2>Sûreté en Belgique</h2><span class="tag">2014 – 2023</span></div>
+    <div class="job">
+      <div class="jt"><h3>Agent mobile, puis chef de poste</h3><span class="d">Oct. 2017 – Mai 2023</span></div>
+      <div class="co"><b>Securitas</b> · Site Elia (réseau électrique, site classé Seveso), Bruxelles</div>
+      <ul>
+        <li>Agent mobile jusqu'en 2019 environ, puis chef de poste seul en poste, de nuit (un agent par site) et de jour surtout le week-end ; priorités, alerte aux services compétents, consignes.</li>
+        <li>Accueil des visiteurs et entreprises extérieures ; badges délivrés uniquement après validation ; lien avec les services techniques.</li>
+        <li>Essais de la main courante électronique et des rondes sur terminal mobile ; formation des collègues et des nouveaux agents.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="jt"><h3>Agent de gardiennage polyvalent</h3><span class="d">Juin 2014 – Sept. 2017</span></div>
+      <div class="co"><b>G4S</b> (contrat repris par Securitas) · Commerces rue Neuve, urgences hospitalières, gares</div>
+      <ul>
+        <li>Présence préventive, désescalade par le dialogue, coordination avec le dispatching et la police ; prévention des vols et interventions coordonnées avec les équipes des commerces.</li>
+        <li>Renfort sécurité sur le site Elia après les attentats de 2016, puis affectation sur ce site, maintenue par Securitas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="other">
+    <div class="row"><span><b>Pause professionnelle</b> : révision SSIAP</span><span class="d">Depuis juin 2023</span></div>
+    <div class="row"><span><b>Auditeur quai</b> (UPS) · <b>Équipier commercial</b> (Promocash)</span><span class="d">2003 – 2006</span></div>
+  </div>
+</main>
+
+<aside>
+  <h2>Diplômes</h2>
+  <div class="dip"><b>SSIAP 2</b><span>Chef d'équipe sécurité incendie · FMS · 2010</span></div>
+  <div class="dip"><b>SSIAP 1</b><span>Agent de sécurité incendie · FMS · 2006</span></div>
+  <div class="dip"><b>Agent de gardiennage</b><span>Loi Tobback (Belgique) · G4S · 2014</span></div>
+  <div class="dip todo"><b>À suivre (POEI à étudier)</b><span>Remises à niveau SSIAP 1 et 2, formation SST complète, TFP APS si le poste l'exige</span></div>
+
+  <h2>Compétences</h2>
+  <div class="grp">Sécurité incendie</div>
+  <div class="tags">SSI · rondes de prévention · moyens de secours · permis de feu · évacuation · secours à personne</div>
+  <div class="grp">Encadrement</div>
+  <div class="tags">Répartition des tâches · accueil des nouveaux agents · relèves · comptes rendus</div>
+  <div class="grp">Sûreté</div>
+  <div class="tags">Contrôle d'accès sur autorisation · surveillance · désescalade · lien police et dispatching</div>
+  <div class="grp">Outils et traçabilité</div>
+  <div class="tags">Main courante électronique · terminal de ronde · rapports · Pack Office</div>
+
+  <h2>Qualités</h2>
+  <ul class="list">
+    <li>Sang-froid et discernement</li>
+    <li>Rigueur et respect des consignes</li>
+    <li>Écoute et sens du service</li>
+    <li>Esprit d'équipe, pédagogie</li>
+  </ul>
+
+  <h2>Atouts</h2>
+  <ul class="list">
+    <li>Aisance avec les outils informatiques (bases réseaux Cisco)</li>
+    <li>Anglais intermédiaire (B1)</li>
+    <li>Bac pro Comptabilité (2002)</li>
+    <li>Cyclisme, randonnée, écriture</li>
+  </ul>
+</aside>
+</div>
+</div>
+</body>
+</html>
